@@ -1,6 +1,7 @@
 = newie
 
-Newie for Ruby is the fastest dependency injection framework ever.
+Newie for Java is the fastest dependency injection framework ever.
+
 Based in vapor.js, newie allows you to inject your dependencies in a way that no
 other controller allows you.
 
@@ -8,29 +9,32 @@ other controller allows you.
 
 You can instantiate any dependency you need, ever:
 
-	Object.new
+	new Object()
 
 == Complex example
 
-For example, imagine two different models:
+For example, imagine two different classes:
 
-	class Foo
-		def initialize(dependency)
-			@dependency = dependency
-		end
-	end
-	class Bar
-	end
+	public interface Dao {}
 	
-Using newie for Ruby:
+	public class JpaDao implements Dao {}
+	
+	public class ProductService {
+	  private Dao dao;
+	  public ProductService(Dao dao){
+	    this.dao = dao;
+	  }
+	}
+	
+Using newie for Java:
 
-	Foo.new(Bar.new)
+	new ProductService(new JpaDao());
 	
 The fastest ever!
 
 = Upcoming
 
-The Roadmap is a long way to go but we are waiting for contributions to this github as a port of newie for Java, C# and many other languages.
+The Roadmap is a long way to go but we are waiting for contributions to this github as a port of newie for C# and many other languages.
 
 == Contributing to newie
  
@@ -44,6 +48,8 @@ The Roadmap is a long way to go but we are waiting for contributions to this git
 
 == Copyright
 
-Copyright (c) 2010 guilherme silveira. See LICENSE.txt for
-further details.
+Copyright © 2010 Pablo Cantero
+Copyright © 2010 Guilherme Silveira
+
+See LICENSE.txt for further details.
 
