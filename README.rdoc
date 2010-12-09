@@ -49,6 +49,7 @@ The Roadmap is a long way to go but we are waiting for contributions to this git
 == Copyright
 
 Copyright © 2010 Pablo Cantero
+
 Copyright © 2010 Guilherme Silveira
 
 See LICENSE.txt for further details.
